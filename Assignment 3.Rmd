@@ -1,0 +1,31 @@
+---
+title: "assignment 3"
+author: "Jay Nagabhairu"
+date: '2022-09-16'
+output: word_document
+---
+```{r}
+library(tidyverse)
+
+```
+
+```{r}
+df <- read.csv(
+  file = "/Users/jaynagabhairu/Desktop/Programming for DS/Assignment 3/House_Rent_Dataset.csv",
+  header = TRUE
+)
+```
+
+```{r}
+head(df)
+```
+
+```{r}
+vignette("ggplot2-in-packages")
+```
+
+```{r}
+p<- ggplot(df, aes(x=Rent, y=Size))  +
+    geom_point(aes(color = City))
+p + ggtitle("Plot of apartment size vs rent in Major Indian cities")
+```
